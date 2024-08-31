@@ -1,24 +1,12 @@
-const barContent = document.querySelectorAll("#bar-content")
-const barBtn = document.querySelectorAll("#bar-cover")
+//Variable
 
-barBtn.forEach(function(e){
-    e.addEventListener('click', hide(barContent))
-})
+const accordion = document.getElementsByClassName("content-container");
 
-console.log(barBtn)
 
-function minPlus () {
-    
+
+for (i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    console.log("works");
+  });
 }
-
-
-function hide(elem){
-        // elem.forEach(function (e) {
-        //   e.classList.toggle("hide");
-        // });
-
-
-        for(let i = 0; i < elem.lenght; i++){
-            elem[i].classList.toggle('hide')
-        }
-    }
